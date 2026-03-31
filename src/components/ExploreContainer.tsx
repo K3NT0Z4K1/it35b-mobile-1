@@ -1,13 +1,24 @@
 import './ExploreContainer.css';
+import { IonButton, IonIcon } from '@ionic/react';
+import { heart } from 'ionicons/icons';
 
-interface ContainerProps { }
+interface ContainerProps {}
 
 const ExploreContainer: React.FC<ContainerProps> = () => {
   return (
-    <div id="container">
-      <strong>Ready to create an app?</strong>
-      <h1>Hellooooo WORRLLLDDD</h1>
-    </div>
+    <>
+      <IonButton>Default</IonButton>
+
+      <IonButton shape="round">Round</IonButton>
+
+      <IonButton>
+        <IonIcon slot="icon-only" icon={heart} />
+      </IonButton>
+
+      <IonButton shape="round">
+        <IonIcon slot="icon-only" icon={heart} />
+      </IonButton>
+    </>
   );
 };
 
