@@ -36,6 +36,8 @@ const Login : React.FC = () => {
 
             <IonContent fullscreen> 
 
+                <IonButton ></IonButton>
+
                 <h1>Login</h1>
             </IonContent>
 
