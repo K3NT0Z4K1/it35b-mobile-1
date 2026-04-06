@@ -40,6 +40,8 @@ const Template : React.FC = () => {
 
 };
 
+export default Template;
+
 // logic
 
 // render ui
