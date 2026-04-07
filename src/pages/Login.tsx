@@ -12,6 +12,11 @@ from "@ionic/react";
 
 
 const Login : React.FC = () => {
+    const navigation = useIonHistory();
+
+    const doLogin = () => {
+        navigation.push('/app', 'forward', 'replace');
+    };
 
     return (
 
@@ -36,7 +41,9 @@ const Login : React.FC = () => {
 
             <IonContent fullscreen> 
 
-                <IonButton ></IonButton>
+                <IonButton expand="full" onClick={() => doLogin()}>
+                    Login
+                </IonButton>
 
                 <h1>Login</h1>
             </IonContent>
