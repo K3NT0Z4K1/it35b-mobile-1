@@ -7,12 +7,14 @@ import {
     IonMenuButton, 
     IonPage, 
     IonTitle, 
-    IonToolbar } 
+    IonToolbar,
+IonButton, 
+useIonRouter} 
 from "@ionic/react";
 
 
 const Login : React.FC = () => {
-    const navigation = useIonHistory();
+    const navigation = useIonRouter();
 
     const doLogin = () => {
         navigation.push('/app', 'forward', 'replace');
@@ -45,7 +47,7 @@ const Login : React.FC = () => {
                     Login
                 </IonButton>
 
-                <h1>Login</h1>
+               
             </IonContent>
 
 
