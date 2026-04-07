@@ -1,10 +1,7 @@
 // Declaration imports
 
-import { 
-    IonButtons, 
-    IonContent, 
+import {
     IonHeader, 
-    IonMenuButton, 
     IonPage, 
     IonTitle, 
     IonToolbar,
