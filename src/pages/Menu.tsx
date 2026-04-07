@@ -9,8 +9,11 @@ import {
     IonTitle, 
     IonToolbar,
     IonSplitPane,
-    IonMenu } 
+    IonMenu, 
+    IonRouterOutlet} 
 from "@ionic/react";
+import { Redirect, Route } from "react-router-dom";
+import Home from "./Home";
 
 
 const Menu : React.FC = () => {
@@ -41,6 +44,15 @@ const Menu : React.FC = () => {
 
                 </IonMenu>
                 {/* Routing*/}
+
+                <IonRouterOutlet id="main">
+
+                    <Route exact path="/app/home" component={Home} />
+                    <Route exact path="/app">
+                    
+                        <Redirect to="/app/home" />
+                    </Route>  
+                </IonRouterOutlet>
                 
             </IonSplitPane>
 
