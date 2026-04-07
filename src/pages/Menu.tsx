@@ -7,13 +7,26 @@ import {
     IonToolbar,
     IonSplitPane,
     IonMenu, 
-    IonRouterOutlet} 
+    IonRouterOutlet,
+    IonContent,
+    IonMenuToggle,
+    IonItem,
+    IonIcon,
+    IonButton} 
 from "@ionic/react";
 import { Redirect, Route } from "react-router-dom";
 import Home from "./Home";
+import About from "./About";
+import { homeOutline, information, logOutOutline } from "ionicons/icons";
 
 
 const Menu : React.FC = () => {
+
+    const path =[
+        {name: 'Home', url: '/app/home', icon:homeOutline},
+        {name: 'About', url: '/app/about', icon:information },
+
+    ]
 
     return (
 
@@ -36,6 +49,30 @@ const Menu : React.FC = () => {
 
                 </IonHeader>
                 {/* Content*/}
+                <IonContent>
+
+                    {path.map((item, index) => (
+                        <IonMenuToggle key={index}>
+
+                            <IonItem routerLink={item.url} routerDirection="forward">
+
+                                <IonIcon icon={item.icon} slot="start"></IonIcon>
+                                {item.name}
+                            </IonItem>
+
+                        </IonMenuToggle>
+
+
+                    ))}
+
+                    <IonButton routerLink= "/" routerDirection="back" expand="full">
+
+                        <IonIcon icon={logOutOutline}  slot="start"></IonIcon>
+                        
+                    </IonButton>
+                    
+                </IonContent>
+
 
 
 
@@ -48,7 +85,11 @@ const Menu : React.FC = () => {
                     <Route exact path="/app">
                     
                         <Redirect to="/app/home" />
+
+            
                     </Route>  
+
+                    <Route exact path="/app/about" component={About} />
                 </IonRouterOutlet>
                 
             </IonSplitPane>
