@@ -1,6 +1,7 @@
 import { IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonMenuButton } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
+import { Route } from 'react-router-dom';
 
 const Home: React.FC = () => {
   return (
@@ -9,9 +10,9 @@ const Home: React.FC = () => {
         <IonToolbar>
             <IonButtons slot="start">
           
-                                  <IonMenuButton></IonMenuButton>
-                              </IonButtons> 
-          
+            <IonMenuButton></IonMenuButton>
+              </IonButtons> 
+    
           <IonTitle>Blank</IonTitle>
         </IonToolbar>
       </IonHeader>
