@@ -11,7 +11,7 @@ import {
 from "@ionic/react";
 
 
-const Template : React.FC = () => {
+const Feed : React.FC = () => {
 
     return (
 
@@ -48,7 +48,7 @@ const Template : React.FC = () => {
 
 };
 
-export default Template;
+export default Feed;
 
 // logic
 
