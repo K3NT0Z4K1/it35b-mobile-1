@@ -65,7 +65,7 @@ const Feed : React.FC = () => {
                     </IonCardHeader>
 
                     <IonCardContent>Here's a small text description for the card content. Nothing more, nothing less.</IonCardContent>
-
+ 
                     <IonGrid>
                         <IonRow>
                             <IonCol>
